@@ -1,0 +1,3 @@
+C:/Users/13476/Documents/GitHub/Anicet_Shops_AppC++/cmake-build-debug/CMakeFiles/Anicet_Shops_AppC__.dir
+C:/Users/13476/Documents/GitHub/Anicet_Shops_AppC++/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/13476/Documents/GitHub/Anicet_Shops_AppC++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
