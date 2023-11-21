@@ -3,14 +3,6 @@
 
 using namespace std;
 
-
-void invalidChoice(){
-    system("cls");
-    cout<<"||**************************************************************************************************||"<<endl;
-    cout<<"||                                      Erreur choix invalid!!                                      ||"<<endl;
-    cout<<"||                                  Veuillez selectionner un numero valid                           ||"<<endl;
-    cout<<"||**************************************************************************************************||"<<endl;
-}
 //********************** main menu function ******************************//
 
 int mainMenu(){
@@ -85,57 +77,66 @@ int commandMenu(){
     return choice;
 }
 
+void gestArticle(int choice){
+    Article a;
+    switch (choice) {
+        case 1:
+            //Enregistrer
+            a.addArticle();
+            break;
+        case 2:
+            //Modification
+            break;
+        case 3:
+            //lister
+            break;
+        case 4:
+            //supprimer
+            break;
+        case 0:
+            break;
+    };
+}
 
+void gestCommande(int choice){
+    switch (choice) {
+        case 1:
+            //Enregistrer
+            break;
+        case 2:
+            //Modification
+            break;
+        case 3:
+            //lister
+            break;
+        case 4:
+            //supprimer
+            break;
+        case 0:
+            break;
+    }
+}
 
-
+void gestion(){
+    int choice = mainMenu();
+    switch (choice) {
+        case 1:
+            choice = articlesMenu();
+            gestArticle(choice);
+            break;
+        case 2:
+            choice = commandMenu();
+            gestCommande(choice);
+            break;
+        case 0:
+            break;
+    }
+}
 
 
 int main() {
-    Article a;
-   int choice = mainMenu();
-    switch (choice) {
-        case 1:
-           choice = articlesMenu();
-            switch (choice) {
-                case 1:
-                    //Enregistrer
-                    a.addArticle();
-                    break;
-                case 2:
-                    //Modification
-                    break;
-                case 3:
-                    //lister
-                    break;
-                case 4:
-                    //supprimer
-                    break;
-                case 0:
-                    main();
-            };
-            break;
-        case 2:
-           choice = commandMenu();
-            switch (choice) {
-                case 1:
-                    //Enregistrer
-                    break;
-                case 2:
-                    //Modification
-                    break;
-                case 3:
-                    //lister
-                    break;
-                case 4:
-                    //supprimer
-                    break;
-                case 0:
-                    main();
-            }
-            break;
-        case 0:
-            return 0;
-    }
+    gestion();
+    return 0;
 }
 
 

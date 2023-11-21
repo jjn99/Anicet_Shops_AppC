@@ -7,16 +7,17 @@
 
 #include <string>
 
+
 using namespace std;
 
 class Article {
     string Libelle;
-    double price;
-    double codebar;
+    float codebar;
+    float price;
 public:
     Article();
 
-    Article(const string &libelle, double price, double codebar);
+    Article(const string &libelle, float codebar, float price);
 
     void addArticle();
 
@@ -28,17 +29,13 @@ public:
 
     void deleteArticle();
 
-    const string &getLibelle() const;
+    float getPrice() const;
 
-    void setLibelle(const string &libelle);
+    void setPrice(float price);
 
-    double getPrice() const;
+    float getCodebar() const;
 
-    void setPrice(double price);
-
-    double getCodebar() const;
-
-    void setCodebar(double codebar);
+    void setCodebar(float codebar);
 };
 
 
